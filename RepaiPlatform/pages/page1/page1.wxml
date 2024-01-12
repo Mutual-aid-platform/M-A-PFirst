@@ -1,0 +1,26 @@
+<!--pages/page1/page1.wxml-->
+<!-- 头部栏 -->
+<view class="ptitle">报修ing...<image src="../../image/shambling-zombie.png" mode=""/></view>
+
+<!-- 功能设置板块 -->
+<view class="pbody1">
+  <picker value="{{selectedIndex1}}" range="{{list1}}" bindchange="change1">
+    <view class='picker'>
+      设备类型：{{list1[selectedIndex1]}}
+    </view>
+  </picker>
+  <picker value="{{selectedIndex2}}" range="{{list2}}" bindchange="change2">
+      <view class='picker'>
+      设备问题：{{list2[selectedIndex2]}}
+      </view>
+  </picker>
+  <picker value="{{selectedIndex3}}" range="{{list3}}" bindchange="change3">
+      <view class='picker'>
+      维修服务：{{list3[selectedIndex3]}}
+      </view>
+  </picker>
+  <view class="view-contain-ti">
+    <text class="text-ti">其他问题</text>
+    <input class="input1"></input>
+</view>
+</view>
