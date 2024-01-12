@@ -1,0 +1,23 @@
+<!-- 设置头部功能栏 -->
+<view class="title">
+  <view class="list">
+    <image bind:tap="taplist" src="../../image/列表.png" mode=""/></view>
+    <view class="photo">
+    <image src="../../image/anvil-impact.png" mode=""/>
+    </view>
+  <view class="titleName">加班修理中...</view>
+</view>
+<!-- 头部菜单设置 -->
+<view class="listcontent" wx:if="{{show}}">
+  <view wx:for="{{arr}}">{{item}}</view>
+</view>
+<!-- 设置功能按键 -->
+<view class="functionBox">
+<view class="functionButton">
+<image src="../../image/laptop.png" mode=""/>
+<text>报修</text>
+</view>
+<view class="functionButton functionBoxlittlechange">
+<image src="../../image/auto-repair.png" mode=""/>
+<text>进程</text></view>
+</view>
