@@ -1,0 +1,28 @@
+/* pages/list/list.wxss */
+.container1 view {
+  
+  height:100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.container1 view:nth-child(1) {
+  background-color: red;
+}
+
+.container1 view:nth-child(3){
+  background-color: rgb(35, 116, 68);
+}
+
+.container1 view:nth-child(2){
+  background-color: rgb(83, 167, 236);
+}
+
+.container1{
+  position: relative;
+  top: 50px;
+  width: 100px;
+  height:100px;
+  /* display: flex;
+  justify-content: space-around; */
+}

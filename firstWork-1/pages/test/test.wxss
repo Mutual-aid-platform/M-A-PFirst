@@ -1,0 +1,20 @@
+/* pages/test/test.wxss */
+view{
+  display: block;
+  text-overflow:ellipsis; 
+  word-wrap:break-word;
+}
+image{
+  width: 100%;
+}
+.comment{
+  text-align: center;
+  color: rgb(89, 95, 95);
+}
+.body{
+  /* 全局设置边界 */
+  padding: 30px;
+  /* padding-top: ;上边界
+  padding-left: ;左边界...*/
+  font-weight: bold;
+}
