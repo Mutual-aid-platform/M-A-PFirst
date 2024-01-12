@@ -1,4 +1,0 @@
-<!--pages/test/test.wxml-->
-<image src="../../image/R-C.jpg" mode="widthFix"/>
-<view class="comment">xxxxxxxxx</view>
-<view class="body">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
