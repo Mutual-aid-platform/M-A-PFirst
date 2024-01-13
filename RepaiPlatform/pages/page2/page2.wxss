@@ -1,1 +1,15 @@
 /* pages/page2/page2.wxss */
+.ptitle3{
+  position: relative;
+  display: flex;
+  height: 35px;
+ box-shadow: 0 0 5px rgb(26, 27, 26);
+ text-align: center;
+ font-size: 40rpx;
+}
+.project{
+  display: flex;
+  height: 100rpx;
+  box-shadow: 0 0 5px rgb(26, 27, 26);
+  margin-top: 10%;
+}

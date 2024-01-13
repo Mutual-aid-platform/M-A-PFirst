@@ -9,7 +9,7 @@
 </view>
 <!-- 头部菜单设置 -->
 <view class="listcontent" wx:if="{{show}}">
-  <view wx:for="{{arr}}">{{item}}</view>
+  <view wx:for="{{arr}}" bind:tap="taplistfunction">{{item}}</view>
 </view>
 <!-- 设置功能按键 -->
 <view class="functionBox">
