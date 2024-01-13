@@ -1,6 +1,6 @@
 <!--pages/page1/page1.wxml-->
 <!-- 头部栏 -->
-<view class="ptitle">报修ing...<image src="../../image/shambling-zombie.png" mode=""/></view>
+<view class="ptitle fontstyle">报修ing...<image src="../../image/狐狸和小鸟.gif" mode=""/></view>
 
 <!-- 功能设置板块 -->
 <view class="pbody1">
