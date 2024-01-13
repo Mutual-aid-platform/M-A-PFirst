@@ -1,2 +1,10 @@
 <!--pages/page2/page2.wxml-->
-<view class="pbody3">睡觉了睡觉了zzz</view>
+<view class="ptitle3">维修进程</view>
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="project">此处存储维修订单详情</view>
+   </block>
+  <block wx:elif="{{tabs[1].isActive}}">
+  <view class="project">此处存储已完成订单详情</view>
+  </block>
+</Tabs>
