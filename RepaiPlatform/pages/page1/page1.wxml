@@ -23,4 +23,8 @@
     <text class="text-ti">其他问题</text>
     <input class="input1"></input>
 </view>
+<!-- 下方确认按钮 -->
+<button class="but1" bind:tap="butTTips">
+  <view>确认</view>
+</button>
 </view>

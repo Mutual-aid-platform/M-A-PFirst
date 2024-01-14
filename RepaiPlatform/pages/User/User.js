@@ -8,6 +8,18 @@ Page({
 
   },
 
+  changephoto(){
+    wx.showActionSheet({
+      itemList:['同步微信头像', '从手机上选择'] ,
+      success: function(res){  
+        console.log(res.tapIndex)  
+    },  
+    fail: function(res) {  
+        console.log(res.errMsg)  
+    }  
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

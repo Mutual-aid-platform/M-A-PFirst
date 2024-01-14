@@ -1,3 +1,12 @@
 <!--pages/User/User.wxml-->
+<view class="userphoto">
+  <image src="http://s78qy413d.hn-bkt.clouddn.com/R-C.png" mode="" bind:tap="changephoto"/>
+  <text class="dtext">请登录</text>
+</view>
 
-<view>这是用户内容</view>
+<view class="allpuser" >
+  <view class="puser" bind:tap="tuchpuser1"> <image class="littletranf" src="http://s78qy413d.hn-bkt.clouddn.com/2d6d4704_E777800_26033bb1.png" mode=""/>设置</view>
+  <view class="puser" bind:tap="tuchpuser1"> <image src="http://s78qy413d.hn-bkt.clouddn.com/OIP-C.png" mode=""/>维修的流程</view>
+  <view class="puser" bind:tap="tuchpuser1"> <image src="http://s78qy413d.hn-bkt.clouddn.com/R-C%20%281%29.png" mode=""/>联系工作人员</view>
+  <view class="puser" bind:tap="tuchpuser1"> <image class="littletranf1" src="http://s78qy413d.hn-bkt.clouddn.com/2121312.png" mode=""/>反馈</view>
+</view>

@@ -40,6 +40,12 @@ Page({
       selectedIndex3: e.detail.value
     });
   },
+  butTTips(){
+    wx.showToast({
+       title: '提交成功',
+       duration: 1000
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

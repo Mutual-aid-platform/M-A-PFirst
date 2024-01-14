@@ -7,6 +7,25 @@
     </view>
   <view class="titleName">加班修理中...</view>
 </view>
+
+<!-- 轮播图效果实现 -->
+<swiper class="swiper-container" indicator-dots indicator-color="#fff" autoplay interval="3000" circular>
+  <swiper-item>
+    <view class="item">
+      <image src="http://s78qy413d.hn-bkt.clouddn.com/780.jpg" mode="aspectFill"/>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">
+      <image src="http://s78qy413d.hn-bkt.clouddn.com/780%20%281%29.jpg" mode="aspectFill"/>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">
+      <image src="http://s78qy413d.hn-bkt.clouddn.com/485017084748365915.jpg" mode="aspectFill"/>
+    </view>
+  </swiper-item>
+</swiper>
 <!-- 头部菜单设置 -->
 <view class="listcontent" wx:if="{{show}}">
   <view wx:for="{{arr}}" bind:tap="taplistfunction">{{item}}</view>
@@ -14,10 +33,12 @@
 <!-- 设置功能按键 -->
 <view class="functionBox">
 <view class="functionButton" bind:tap="topage1">
-<image src="http://s78qy413d.hn-bkt.clouddn.com/%E7%BB%B4%E4%BF%AE.gif" mode=""/>
-<text>报修</text>
+  <image src="http://s78qy413d.hn-bkt.clouddn.com/%E7%BB%B4%E4%BF%AE.gif" mode=""/>
+  <text>报修</text>
 </view>
+<view class="functionButton"></view>
+<view class="functionButton"></view>
 <view class="functionButton functionBoxlittlechange" bind:tap="topage2">
-<image src="http://s78qy413d.hn-bkt.clouddn.com/%E9%94%A4%E5%AD%90%E6%96%BD%E5%B7%A5.gif" mode=""/>
-<text>进程</text></view>
+  <image src="http://s78qy413d.hn-bkt.clouddn.com/%E9%94%A4%E5%AD%90%E6%96%BD%E5%B7%A5.gif" mode=""/>
+  <text>进程</text></view>
 </view>
