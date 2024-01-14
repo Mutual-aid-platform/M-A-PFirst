@@ -1,9 +1,9 @@
 <!-- 设置头部功能栏 -->
 <view class="title">
   <view class="list">
-    <image bind:tap="taplist" src="../../image/列表.png" mode=""/></view>
+    <image bind:tap="taplist" src="http://s78qy413d.hn-bkt.clouddn.com/%E5%88%97%E8%A1%A8.png" mode=""/></view>
     <view class="photo">
-    <image src="../../image/稿定抠图.png" mode=""/>
+    <image src="http://s78qy413d.hn-bkt.clouddn.com/%E7%A8%BF%E5%AE%9A%E6%8A%A0%E5%9B%BE.png" mode=""/>
     </view>
   <view class="titleName">加班修理中...</view>
 </view>
@@ -14,10 +14,10 @@
 <!-- 设置功能按键 -->
 <view class="functionBox">
 <view class="functionButton" bind:tap="topage1">
-<image src="../../image/维修.gif" mode=""/>
+<image src="http://s78qy413d.hn-bkt.clouddn.com/%E7%BB%B4%E4%BF%AE.gif" mode=""/>
 <text>报修</text>
 </view>
 <view class="functionButton functionBoxlittlechange" bind:tap="topage2">
-<image src="../../image/锤子施工.gif" mode=""/>
+<image src="http://s78qy413d.hn-bkt.clouddn.com/%E9%94%A4%E5%AD%90%E6%96%BD%E5%B7%A5.gif" mode=""/>
 <text>进程</text></view>
 </view>
