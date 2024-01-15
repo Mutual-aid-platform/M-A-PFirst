@@ -1,4 +1,13 @@
 <!--pages/Community/Community.wxml-->
 
-<view>这是一个电脑社区论坛，大家有什么不懂的问题可以在上面发贴咨询</view>
+<view class="txt-list">
+    <view class="txt-item">
+      <view>#电脑小知识#</view>
+        <text>{{txt}}</text>
+    </view>
+</view>
+<view class="btns">
+    <button type="primary" bindtap="copyData">复制</button>
+    <button class="change" bindtap="change">更换</button>
+</view>
 
