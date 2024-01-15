@@ -1,6 +1,6 @@
 <!--pages/User/User.wxml-->
 <view class="userphoto">
-  <image src="http://s78qy413d.hn-bkt.clouddn.com/R-C.png" mode="" bind:tap="changephoto"/>
+  <image src="http://s78qy413d.hn-bkt.clouddn.com/555555.jpg" mode="" bind:tap="changephoto"/>
   <text class="dtext">请登录</text>
 </view>
 
