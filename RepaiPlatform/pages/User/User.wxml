@@ -1,7 +1,7 @@
 <!--pages/User/User.wxml-->
 <view class="userphoto">
-  <image src="http://s78qy413d.hn-bkt.clouddn.com/555555.jpg" mode="" bind:tap="changephoto"/>
-  <text class="dtext">请登录</text>
+  <image src="{{userphoto}}" mode="" bind:tap="login"/>
+  <text class="dtext">{{nickName}}</text>
 </view>
 
 <view class="allpuser" >

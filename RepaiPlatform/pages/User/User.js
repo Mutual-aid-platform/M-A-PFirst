@@ -5,20 +5,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    nickName:'请登录',
+    userphoto:'http://s78qy413d.hn-bkt.clouddn.com/555555.jpg'
   },
-
-  changephoto(){
-    wx.showActionSheet({
-      itemList:['同步微信头像', '从手机上选择'] ,
-      success: function(res){  
-        console.log(res.tapIndex)  
-    },  
-    fail: function(res) {  
-        console.log(res.errMsg)  
-    }  
-    })
-  },
+login(){
+  wx.getUserProfile({
+    desc: '获取用户信息',
+    success: (res) =>{
+      console.log(res.userInfo)
+      this.setData({
+        nickName:res.userInfo.nickName,
+        userphoto : res.userInfo.avatarUrl
+      })
+    }
+  })
+},
+  // changephoto(){
+  //   wx.showActionSheet({
+  //     itemList:['同步微信头像', '从手机上选择'] ,
+  //     success: function(res){  
+  //       console.log(res.tapIndex)  
+  //   },  
+  //   fail: function(res) {  
+  //       console.log(res.errMsg)  
+  //   }  
+  //   })
+  // },
 
   /**
    * 生命周期函数--监听页面加载

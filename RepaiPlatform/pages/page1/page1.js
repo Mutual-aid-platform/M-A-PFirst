@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    selectedIndex1: 0,
-    selectedIndex2: 0,
-    selectedIndex3: 0,
+    selectedIndex1: '',
+    selectedIndex2: '',
+    selectedIndex3: '',
 
     list1:[
       '笔记本'
@@ -41,6 +41,26 @@ Page({
     });
   },
   butTTips(){
+    var t = this;
+    
+    wx.request({
+      url: 'http://localhost:8080/mapInsert',
+      method: 'Post',
+      data:{ 
+      id:'10122',
+      name:'xkjxjk',
+      wxName:'sjldkf',
+      orderDetail: t.data.list3[t.data.selectedIndex3],
+      orderTime:'2002-10-03',
+      orderDone:'1'
+    },
+      header: {
+        "Content-Type": 'application/json' 
+        },
+      success:function(){
+        console.log("200");
+      }
+    });
     wx.showToast({
        title: '提交成功',
        duration: 1000
