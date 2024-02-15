@@ -5,5 +5,25 @@
     "compileHotReLoad": true,
     "urlCheck": false
   },
-  "libVersion": "2.22.1"
+  "libVersion": "2.22.1",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/page1/page1",
+          "pathName": "pages/page1/page1",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/User/User",
+          "pathName": "pages/User/User",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

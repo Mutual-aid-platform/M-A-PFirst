@@ -2,6 +2,7 @@
 <!-- 头部栏 -->
 <view class="ptitle fontstyle">报修ing...<image src="http://s78qy413d.hn-bkt.clouddn.com/%E7%8B%90%E7%8B%B8%E5%92%8C%E5%B0%8F%E9%B8%9F.gif" mode=""/></view>
 
+
 <!-- 功能设置板块 -->
 <view class="pbody1">
   <picker value="{{selectedIndex1}}" range="{{list1}}" bindchange="change1">
@@ -23,8 +24,12 @@
     <text class="text-ti">其他问题</text>
     <input class="input1"></input>
 </view>
+
+
+
 <!-- 下方确认按钮 -->
 <button class="but1" bind:tap="butTTips">
   <view>确认</view>
 </button>
 </view>
+
