@@ -1,28 +1,31 @@
 // pages/page1/page1.js
 Page({
 
+  onLoad:function(){
+  },
   /**
    * 页面的初始数据
    */
   data: {
+
+    information: null,
+    maxLength:150,
+    pickImage: 'http://s78qy413d.hn-bkt.clouddn.com/arrow-right.png',
+
     selectedIndex1: '',
     selectedIndex2: '',
-    selectedIndex3: '',
+    selectedIndex3: '2024-01-01',
 
     list1:[
       '笔记本'
     ],
  
     list2:[
-      '屏幕',
-      '键盘',
-      '硬件'
-    ],
-    list3:[
       '加固态',
       '加内存条',
-      '清灰'
-    ],
+      '清灰',
+      '其他问题'
+    ]
   },
 
   change1(e){
@@ -42,37 +45,57 @@ Page({
   },
   butTTips(){
     var t = this;
-    
+
+    // if (t.data.selectedIndex1!=null){
+    //
+    // }
     wx.request({
+      
       url: 'http://localhost:8080/mapInsert',
       method: 'Post',
       data:{ 
       id:'10122',
       name:'xkjxjk',
       wxName:'sjldkf',
-      orderDetail: t.data.list3[t.data.selectedIndex3],
-      orderTime:'2002-10-03',
-      orderDone:'1'
+      orderStyle:t.data.list1[t.data.selectedIndex1],
+      orderQuest:t.data.list2[t.data.selectedIndex2],
+      orderDetail: t.data.information,
+      orderTime: t.data.selectedIndex3,
+      orderDone:'0'
     },
       header: {
         "Content-Type": 'application/json' 
         },
       success:function(){
+        t.onLoad();
         console.log("200");
+        wx.showToast({
+          title: '提交成功',
+          duration: 1000
+       })
       }
-    });
-    wx.showToast({
-       title: '提交成功',
-       duration: 1000
     })
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+    
   },
 
+  tAreaName: function (e){
+    this.setData({
+      information: e.detail.value,
+    })
+    console.log(this.data.information)
+  },
+  tapChooseImage: function(){
+   wx.chooseMedia({
+     count: 1,
+     mediaType:['image'],
+     sourceType:['album', 'camera'],
+     sizeType:['compressed'],
+     camera:'back',
+     success(res){
+      const tempFilePaths = res.tempFilePaths;
+     }
+   })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

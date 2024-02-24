@@ -1,27 +1,37 @@
 <!--pages/page1/page1.wxml-->
 <!-- 头部栏 -->
-<view class="ptitle fontstyle">报修ing...<image src="http://s78qy413d.hn-bkt.clouddn.com/%E7%8B%90%E7%8B%B8%E5%92%8C%E5%B0%8F%E9%B8%9F.gif" mode=""/></view>
+<view class="ptitle fontstyle">报修ing...<image src="http://s8uewdzb9.hn-bkt.clouddn.com/%E7%8B%90%E7%8B%B8%E5%92%8C%E5%B0%8F%E9%B8%9F.gif" mode=""/></view>
 
 <!-- 功能设置板块 -->
 <view class="pbody1">
   <picker value="{{selectedIndex1}}" range="{{list1}}" bindchange="change1">
-    <view class='picker'>
-      设备类型：{{list1[selectedIndex1]}}
+    <view class="picker">
+      设备类型：
+        <view class="pickerContent">{{list1[selectedIndex1]}}</view>
+        <image src="{{pickImage}}"/>
     </view>
   </picker>
   <picker value="{{selectedIndex2}}" range="{{list2}}" bindchange="change2">
-      <view class='picker'>
-      设备问题：{{list2[selectedIndex2]}}
+      <view class="picker">
+      设备问题：
+          <view class='pickerContent'>{{list2[selectedIndex2]}}</view>
+          <image src="{{pickImage}}"/>
       </view>
   </picker>
-  <picker value="{{selectedIndex3}}" range="{{list3}}" bindchange="change3">
-      <view class='picker'>
-      维修服务：{{list3[selectedIndex3]}}
+  <picker value="{{selectedIndex3}}" mode="date" bindchange="change3">
+      <view class="picker">
+      预定时间：
+          <view class='pickerContent'>{{selectedIndex3}}</view>
+          <image src="{{pickImage}}"/>
       </view>
   </picker>
   <view class="view-contain-ti">
-    <text class="text-ti">其他问题</text>
-    <input class="input1"></input>
+<!--    <text class="text-ti">其他问题</text>-->
+      <textarea name="tAreaName" bindinput="tAreaName"  maxlength="{{maxLength}}" placeholder="请输入故障的详细信息"/>
+<!--    <input class="input1" placeholder="请输入故障的详细信息" ></input>-->
+</view>
+<view class="chooseImage" bind:tap="tapChooseImage">
+<image src="../../image/plus.png" mode=""/>
 </view>
 <!-- 下方确认按钮 -->
 <button class="but1" bind:tap="butTTips">

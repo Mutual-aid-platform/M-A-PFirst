@@ -8,7 +8,7 @@
  font-size: 40rpx;
 }
 .fontstyle{
-  font-family: 楷体;
+  font-family: 楷体, serif;
 }
 .ptitle image{
   position: relative;
@@ -24,34 +24,54 @@
   padding-top: 15%;
 }
 .picker{
+  display: flex;
   height: 40rpx;
-  border: solid 1px rgb(226, 220, 220);
-  background-color: rgb(230, 222, 222);
+  border-bottom: solid 1px rgb(199, 197, 197);
+  /*background-color: rgb(230, 222, 222);*/
   padding: 20rpx;
   margin: 40rpx;
 }
 
+.pickerContent{
+  overflow: hidden;
+  white-space: nowrap;
+  margin: auto 5rpx auto auto;
+}
+
+.picker image{
+  height: 40rpx;
+  width: 40rpx;
+
+}
+
 .view-contain-ti {
   display: flex;
-  height: 100px;
+  height: 260rpx;
   margin: 20px;
   border: 3rpx solid #969593;
   border-radius: 10rpx;
 }
 
-.text-ti {
-  position: absolute;
-  font-size: 12px;
-  background: white;
-  margin: -10px 0 0 10px;
-  padding: 0 5px;
-  color: rgb(144, 147, 167);
-}
+/*.text-ti {*/
+/*  position: absolute;*/
+/*  font-size: 12px;*/
+/*  background: white;*/
+/*  margin: -10px 0 0 10px;*/
+/*  padding: 0 5px;*/
+/*  color: rgb(144, 147, 167);*/
+/*}*/
 
-.input1 {
-  height: 100px;
-  width: 400px;
-  margin:  auto 10px;
+/*.input1 {*/
+/*  position: relative;*/
+/*  top: -80rpx;*/
+/*  height: 200rpx;*/
+/*  width: 800rpx;*/
+/*  margin:  auto 10px;*/
+/*}*/
+
+textarea{
+  width: 700rpx;
+  font-size: larger;
 }
 
 .but1{
@@ -65,4 +85,20 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.chooseImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30rpx;
+  margin-top: -20rpx;
+  height: 200rpx;
+  width: 200rpx;
+  background-color: rgb(233, 230, 230);
+  border-radius: 5%;
+}
+.chooseImage image{
+  margin: auto 5px;
+  height: 100rpx;
+  width: 100rpx;
 }

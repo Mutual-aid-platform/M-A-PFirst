@@ -1,22 +1,13 @@
 // pages/page2/page2.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-     tabs:[
-       {
-         id: 0,
-         value: "处理中",
-         isActive: true
-       },
-       {
-        id: 1,
-        value: "已完成",
-        isActive: false
-      }
-     ]
+    showProject:true,
+    orderTime:'',
+    orderQuest:'',
+    orderStyle:''
   },
 
   /**
@@ -24,14 +15,40 @@ Page({
    */
   onLoad(options) {
   },
+  
+  butCheck: function(){
+    var that =this;
+    wx.request({
+      url: 'http://localhost:8080/mapSelect',
+      method: 'GET',
+      header: {
+        "Content-Type": 'application/json' 
+        },
 
-  handleTabsItemChange(e){
-    const {index}=e.detail;
-    let {tabs}=this.data;
-    tabs.forEach((v,i)=>i===index?v.isActive=true:v.isActive=false);
+        success:function(res){
+          console.log(res.data);
+          var allDate = res.data.data[0];
+          var oQ = allDate.orderQuest;
+          var oT = allDate.orderTime;
+          var oS = allDate.orderStyle;
+          console.log(allDate);
+          if (res.data.length != 0) {
+          that.setData({
+            orderQuest:oQ,
+            orderTime:oT,
+            orderStyle:oS,
+            showProject: !that.data.showProject,
+          })
+        }
+        }
+    })
+  },
 
-    this.setData({
-      tabs
+  deleteButton:function(){
+    var that =this;
+    that.setData({
+      showProject: !that.data.showProject,
     })
   }
+
 })

@@ -14,7 +14,7 @@ Page({
     })
   },
 topage2(){
-    wx.navigateTo({
+    wx.switchTab({
       url: '/pages/page2/page2'
     })
 },

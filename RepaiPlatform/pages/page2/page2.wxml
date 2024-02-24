@@ -1,10 +1,24 @@
 <!--pages/page2/page2.wxml-->
-<view class="ptitle3">维修进程</view>
-<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
-  <block wx:if="{{tabs[0].isActive}}">
-    <view class="project">此处存储维修订单详情</view>
-   </block>
-  <block wx:elif="{{tabs[1].isActive}}">
-  <view class="project">此处存储已完成订单详情</view>
-  </block>
-</Tabs>
+<!-- <view  class="ptitle3">维修进程</view> -->
+  <view class="backGroundF">
+    <image src="http://s8uewdzb9.hn-bkt.clouddn.com/3196.png_860.png" mode=""/>
+    <text>暂无历史维修</text>
+    <button class="butCk" bind:tap="butCheck">
+     <view>查询进度</view>
+    </button>
+  </view>
+
+  <view wx:if="{{showProject}}" class="backGroundT">
+    <view class="project">
+      <view class="ordDetail">
+        <view>维修类型：{{orderStyle}}</view>
+        <view>维修问题：{{orderQuest}}</view>
+      </view>
+      <view class="ordTime">{{orderTime}}</view>
+      <view class="edButton">
+        <view class="Edit" bind:tap="editButton">编辑</view>
+        <!-- <view class="borderst"></view> -->
+        <view class="Delete" bind:tap="deleteButton">删除</view>
+      </view>
+    </view>
+  </view>

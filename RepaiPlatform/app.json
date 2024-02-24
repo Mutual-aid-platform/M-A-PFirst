@@ -24,20 +24,21 @@
     "borderStyle":"white",
 "list": [
   {
-    "selectedIconPath": "image/home.png",
-    "iconPath": "image/home.png",
+    "selectedIconPath": "image/a-ziyuan548ldpi2.png",
+    "iconPath": "image/a-ziyuan548ldpi.png",
     "pagePath": "pages/index/index",
     "text": "首页"
   },
   {
-    "selectedIconPath": "image/community.png",
-    "iconPath": "image/community.png",
-    "pagePath": "pages/Community/Community",
-    "text": "社区"
+    "selectedIconPath": "image/a-ziyuan572ldpi2.png",
+    "iconPath": "image/a-ziyuan572ldpi.png",
+    "pagePath": "pages/page2/page2",
+    "text": "进程"
   },
+  
   {
-    "selectedIconPath": "image/user.png",
-    "iconPath": "image/user.png",
+    "selectedIconPath": "image/a-ziyuan553ldpi2.png",
+    "iconPath": "image/a-ziyuan553ldpi.png",
     "pagePath": "pages/User/User",
     "text": "我的"
   }
