@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wx2work.mapplatform.mapper.mapfMapper">
+
+    <select id="select" resultType="com.wx2work.mapplatform.pojo.mapUser">
+        select id, name, wx_name, map_order.order_number, order_style, order_quest, order_detail, order_time, order_done
+        from mapdb.map_order, mapdb.map_user
+    </select>
+    <insert id="insert">
+        insert into mapdb.map_order(order_number, order_quest, order_detail, order_time, order_done, order_style) values
+            (#{orderNumber}, #{orderQuest}, #{orderDetail}, #{orderTime}, #{orderDone}, #{orderStyle})
+    </insert>
+
+</mapper>

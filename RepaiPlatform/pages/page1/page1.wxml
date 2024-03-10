@@ -30,8 +30,15 @@
       <textarea name="tAreaName" bindinput="tAreaName"  maxlength="{{maxLength}}" placeholder="请输入故障的详细信息"/>
 <!--    <input class="input1" placeholder="请输入故障的详细信息" ></input>-->
 </view>
-<view class="chooseImage" bind:tap="tapChooseImage">
-<image src="../../image/plus.png" mode=""/>
+<!-- 图片选择 -->
+<view class="photochoice">
+  <view wx:if="{{chImage}}" class="chooseImage" bind:tap="tapChooseImage">
+    <image src="../../image/plus.png" mode=""/>
+  </view>
+  <view wx:if="{{quImage}}" class="questImage">
+    <image src="{{questImage}}" mode="" bind:tap="previewImage"/>
+    <image src="../../image/redx.png" bind:tap="deleteImage" mode=""/>
+  </view>
 </view>
 <!-- 下方确认按钮 -->
 <button class="but1" bind:tap="butTTips">

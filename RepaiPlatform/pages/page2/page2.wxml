@@ -14,7 +14,7 @@
         <view>维修类型：{{orderStyle}}</view>
         <view>维修问题：{{orderQuest}}</view>
       </view>
-      <view class="ordTime">{{orderTime}}</view>
+      <view class="ordTime">{{orderTime}}</view> 
       <view class="edButton">
         <view class="Edit" bind:tap="editButton">编辑</view>
         <!-- <view class="borderst"></view> -->

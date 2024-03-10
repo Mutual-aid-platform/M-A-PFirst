@@ -1,5 +1,6 @@
 package com.wx2work.mapplatform.controller;
 
+import com.wx2work.mapplatform.pojo.mapOrder;
 import com.wx2work.mapplatform.pojo.mapUser;
 import com.wx2work.mapplatform.pojo.result;
 import com.wx2work.mapplatform.service.mapfService;
@@ -19,11 +20,11 @@ public class orderingcontroller {
 @Autowired
     private mapfService mapfservice;
 // 用户新增订单
-    @PostMapping("/mapInsert")
-    public result mapInsert(@RequestBody mapUser mapuser){
-        log.info("新增order数据: {}", mapuser);
+    @PostMapping("/mapInsert/{id}")
+    public result mapInsert(@RequestBody mapOrder maporder, @PathVariable int id){
+        log.info("新增o数据: {}",maporder);
 
-        mapfservice.insert(mapuser);
+        mapfservice.insert(maporder,id);
         return result.success();
     }
 // 用户查询订单进度

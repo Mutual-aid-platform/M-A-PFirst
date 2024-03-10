@@ -1,6 +1,7 @@
 package com.wx2work.mapplatform.service.impl;
 
 import com.wx2work.mapplatform.mapper.mapfMapper;
+import com.wx2work.mapplatform.pojo.mapOrder;
 import com.wx2work.mapplatform.pojo.mapUser;
 import com.wx2work.mapplatform.service.mapfService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,8 @@ public class mapfSerivceImpl  implements mapfService {
     @Autowired
     private mapfMapper mapfmapper;
     @Override
-    public void insert(mapUser mapuser) {
-        mapfmapper.insert(mapuser);
+    public void insert(mapOrder maporder, int id) {
+        mapfmapper.insert(maporder);
     }
 
     @Override

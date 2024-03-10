@@ -8,6 +8,9 @@ Page({
    */
   data: {
 
+    chImage:true,
+    quImage:false,
+    questImage:'',
     information: null,
     maxLength:150,
     pickImage: 'http://s78qy413d.hn-bkt.clouddn.com/arrow-right.png',
@@ -77,25 +80,50 @@ Page({
     })
     
   },
-
+// 设置文本框
   tAreaName: function (e){
     this.setData({
       information: e.detail.value,
     })
     console.log(this.data.information)
   },
+// 设置图片上传
   tapChooseImage: function(){
+    var that = this;
    wx.chooseMedia({
      count: 1,
      mediaType:['image'],
      sourceType:['album', 'camera'],
-     sizeType:['compressed'],
+     sizeType:['original'],
      camera:'back',
      success(res){
-      const tempFilePaths = res.tempFilePaths;
+      const questImage = res.tempFiles[0].tempFilePath;
+      console.log(res);
+      console.log(res.tempFiles[0].tempFilePath);
+      that.setData({
+        questImage: questImage,
+        chImage: false,
+        quImage: true
+      })
      }
    })
   },
+// 查看图片
+previewImage: function(e){
+ const questI = this.data.questImage
+ wx.previewImage({
+   current: questI,
+   urls: [questI],
+ })
+},
+// 删除图片
+deleteImage: function(e){
+  this.setData({
+    questImage:'',
+    quImage:false,
+    chImage:true
+  })
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

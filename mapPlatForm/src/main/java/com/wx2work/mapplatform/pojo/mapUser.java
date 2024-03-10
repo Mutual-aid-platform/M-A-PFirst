@@ -14,11 +14,4 @@ public class mapUser {
     private int id;
     private String name;
     private String wxName;
-
-    private String orderStyle;
-
-    private String orderQuest;
-    private String orderDetail;
-    private LocalDate orderTime;
-    private int orderDone;
 }
