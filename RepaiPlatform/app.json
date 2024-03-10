@@ -1,4 +1,5 @@
 {
+
   "pages": [
     "pages/index/index",
     "pages/page1/page1",
@@ -43,5 +44,8 @@
     "text": "我的"
   }
 ]
+  },
+  "useExtendedLib": {
+    "weui":true
   }
 }

@@ -1,25 +1,48 @@
 // pages/User/User.js
+
+//初始图像
+const defaultAvatarUrl ='http://m.qpic.cn/psc?/V12tgcxV1jCIIP/ruAMsa53pVQWN7FLK88i5jn3V7jBESipQdKOAen*iRORY7VXzn4HeipPj7JvHJsll3FXj4Te9MJ9NZ9J07KpjfPFAjxPEc76RaE5fgdXGY8!/b&bo=gACAAIAAgAADFzI!&rf=viewer_4'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    nickName:'请登录',
-    userphoto:'http://s78qy413d.hn-bkt.clouddn.com/555555.jpg'
+    avatarUrl: defaultAvatarUrl,
+
   },
-login(){
-  wx.getUserProfile({
-    desc: '获取用户信息',
-    success: (res) =>{
-      console.log(res.userInfo)
-      this.setData({
-        nickName:res.userInfo.nickName,
-        userphoto : res.userInfo.avatarUrl
-      })
-    }
-  })
+
+
+  // 获取用户图像
+  onChooseAvatar(e) {
+    const { avatarUrl } = e.detail 
+    this.setData({
+      avatarUrl,
+    })
+  },
+
+// 获取用户昵称
+formsubmit(e){
+  const nickName = e.detail.value.nickname
+  console.log("nickName", nickName)
+  // do something
 },
+
+
+
+// login(){
+//   wx.getUserProfile({ 
+//     desc: '获取用户信息',
+//     success: (res) =>{
+//       console.log(res.userInfo)
+//       this.setData({
+//         nickName:res.userInfo.nickName,
+//         userphoto : res.userInfo.avatarUrl
+//       })
+//     }
+//   })
+// },
+
   // changephoto(){
   //   wx.showActionSheet({
   //     itemList:['同步微信头像', '从手机上选择'] ,
